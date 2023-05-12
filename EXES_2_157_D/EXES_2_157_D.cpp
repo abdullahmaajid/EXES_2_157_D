@@ -26,3 +26,23 @@ int main() {
     // Melakukan binary search
     int abdullah = 0;
     int maajid = n - 1;
+    while (abdullah <= maajid) {
+        int mid = (abdullah + maajid) / 2;
+
+        //MAIN
+
+        if (arr[mid] == x) {
+            cout << "Angka ditemukan pada indeks ke-" << mid << endl;
+            return 0;
+        }
+        else if (x < arr[mid]) {
+            upperbound = mid - 1;
+        }
+        else {
+            lowerbound = mid + 1;
+        }
+    }
+
+    cout << "Angka tidak ditemukan dalam array" << endl;
+    return 0;
+}
