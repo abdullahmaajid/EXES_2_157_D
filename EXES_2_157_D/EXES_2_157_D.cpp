@@ -25,3 +25,4 @@ int main() {
 
     // Melakukan binary search
     int abdullah = 0;
+    int maajid = n - 1;
