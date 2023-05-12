@@ -6,13 +6,8 @@ using namespace std;
 int main() {
 
     // Masukkan Jumlah Array yang telah ditentukan
-    int n = 57+12+20-(4x5)+10+5+2+3;
-    int arr[n];
-
-    57+12+20-20+10+5+2+3
-    69+0+15+5
-    69 + 20 
-        = 89
+    int jed = 5+7+1+2+20-20+15;
+    int arr[jed];
 
     // Mengisi array dengan angka secara otomatis
     for (int i = 0; i < n; i++) {
@@ -26,4 +21,7 @@ int main() {
     cout << "Masukkan angka yang ingin dicari: ";
     cin >> x;
 
+    //ALGORITHM//
 
+    // Melakukan binary search
+    int abdullah = 0;
