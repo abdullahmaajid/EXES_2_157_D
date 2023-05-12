@@ -1,48 +1,64 @@
 #include <iostream> 
-#include <algorithm>
 
 using namespace std;
 
-int main() {
+int jed[30];
+int n;
+int i;
 
-    // Masukkan Jumlah Array yang telah ditentukan
-    int jed = 5+7+1+2+20-20+15;
-    int arr[jed];
+void input()
+{
+    while (true)
+    {
+        cout << "Enter the number of element in the array : ";
+        cin >> n;
+        if ((n > 0) && (n <= 30))
+            break;
+        else
+            cout << "\n Array should have minimum 1 amd maximum 20 element. \n\n";
+    }
 
-    // Mengisi array dengan angka secara otomatis
-    for (int i = 0; i < n; i++) {
-        arr[i] = i;
-        }
+    // Accept array elements
+    cout << "\n-------------------\n";
+    cout << " Enter array element \n";
+    cout << "---------------------\n";
+    for (i = 0; i < n; i++)
+    {
+        cout << "<" << (i + 1) << ">";
+        cin >> jed[i];
+    }
+}
 
-    //INPUT//
-    
-    // Meminta input angka yang ingin dicari
-    int x;
-    cout << "Masukkan angka yang ingin dicari: ";
-    cin >> x;
-
-    //ALGORITHM//
+void binarysearch() {
 
     // Melakukan binary search
     int abdullah = 0;
     int maajid = n - 1;
+    int x;
+
+    cout << "Masukkan angka yang ingin dicari: ";
+    cin >> x;
+
+
     while (abdullah <= maajid) {
         int mid = (abdullah + maajid) / 2;
 
-        //MAIN
-
-        if (arr[mid] == x) {
+        if (jed[mid] == x) {
             cout << "Angka ditemukan pada indeks ke-" << mid << endl;
-            return 0;
+            break;
         }
-        else if (x < arr[mid]) {
-            upperbound = mid - 1;
+        else if (x < jed[mid]) {
+            maajid = mid - 1;
         }
         else {
-            lowerbound = mid + 1;
+            abdullah = mid + 1;
         }
     }
 
     cout << "Angka tidak ditemukan dalam array" << endl;
-    return 0;
+}
+
+int main() {
+    input();
+    binarysearch();
 }
