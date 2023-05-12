@@ -19,4 +19,11 @@ int main() {
         arr[i] = i;
         }
 
+    //INPUT//
+    
+    // Meminta input angka yang ingin dicari
+    int x;
+    cout << "Masukkan angka yang ingin dicari: ";
+    cin >> x;
+
 
